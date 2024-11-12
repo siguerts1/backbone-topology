@@ -1,0 +1,60 @@
+name: backbone-topology
+
+topology:
+  nodes:
+    MTL-CORE-01:
+      kind: ceos
+      image: ceos:4.30.4M
+      startup-config: startup-configs/MTL-CORE-01.cfg
+    MTL-CORE-02:
+      kind: ceos
+      image: ceos:4.30.4M
+      startup-config: startup-configs/MTL-CORE-02.cfg
+    SF-CORE-01:
+      kind: ceos
+      image: ceos:4.30.4M
+      startup-config: startup-configs/SF-CORE-01.cfg
+    SF-CORE-02:
+      kind: ceos
+      image: ceos:4.30.4M
+      startup-config: startup-configs/SF-CORE-02.cfg
+    LDN-CORE-01:
+      kind: ceos
+      image: ceos:4.30.4M
+      startup-config: startup-configs/LDN-CORE-01.cfg
+    LDN-CORE-02:
+      kind: ceos
+      image: ceos:4.30.4M
+      startup-config: startup-configs/LDN-CORE-02.cfg
+
+  links:
+    # Montreal Core Routers (LAG links between them)
+    - endpoints: ["MTL-CORE-01:eth1", "MTL-CORE-02:eth1"]
+    - endpoints: ["MTL-CORE-01:eth2", "MTL-CORE-02:eth2"]
+
+    # San Francisco Core Routers (LAG links between them)
+    - endpoints: ["SF-CORE-01:eth1", "SF-CORE-02:eth1"]
+    - endpoints: ["SF-CORE-01:eth2", "SF-CORE-02:eth2"]
+
+    # London Core Routers (LAG links between them)
+    - endpoints: ["LDN-CORE-01:eth1", "LDN-CORE-02:eth1"]
+    - endpoints: ["LDN-CORE-01:eth2", "LDN-CORE-02:eth2"]
+
+    # Redundant Inter-Site Connections
+    # Montreal to San Francisco
+    - endpoints: ["MTL-CORE-01:eth3", "SF-CORE-01:eth3"]
+    - endpoints: ["MTL-CORE-01:eth4", "SF-CORE-02:eth4"]
+    - endpoints: ["MTL-CORE-02:eth5", "SF-CORE-01:eth5"]
+    - endpoints: ["MTL-CORE-02:eth6", "SF-CORE-02:eth6"]
+
+    # Montreal to London
+    - endpoints: ["MTL-CORE-01:eth7", "LDN-CORE-01:eth3"]
+    - endpoints: ["MTL-CORE-01:eth8", "LDN-CORE-02:eth4"]
+    - endpoints: ["MTL-CORE-02:eth9", "LDN-CORE-01:eth5"]
+    - endpoints: ["MTL-CORE-02:eth10", "LDN-CORE-02:eth6"]
+
+    # San Francisco to London
+    - endpoints: ["SF-CORE-01:eth7", "LDN-CORE-01:eth7"]
+    - endpoints: ["SF-CORE-01:eth8", "LDN-CORE-02:eth8"]
+    - endpoints: ["SF-CORE-02:eth9", "LDN-CORE-01:eth9"]
+    - endpoints: ["SF-CORE-02:eth10", "LDN-CORE-02:eth10"]

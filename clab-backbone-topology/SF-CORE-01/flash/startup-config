@@ -1,0 +1,63 @@
+! Startup-config last modified at Mon Nov 11 22:38:15 2024 by root
+! device: SF-CORE-01 (cEOSLab, EOS-4.30.4M-34191138.4304M (engineering build))
+!
+no aaa root
+!
+username admin privilege 15 role network-admin secret sha512 $6$ENUBba3lRS5Efwq5$NstZI4OOR6k/3fbYzkabhBgH1BFM7gm57i23RuaROqfstPmug6U/Trt/9zezdZEaYGllqSB/ukejNSuyzq3F7/
+!
+transceiver qsfp default-mode 4x10G
+!
+service routing protocols model multi-agent
+!
+hostname SF-CORE-01
+!
+spanning-tree mode mstp
+!
+system l1
+   unsupported speed action error
+   unsupported error-correction action error
+!
+management api http-commands
+   no shutdown
+!
+management api gnmi
+   transport grpc default
+!
+management api netconf
+   transport ssh default
+!
+interface Ethernet1
+   ip address 10.0.1.9/30
+!
+interface Ethernet2
+   ip address 10.0.1.13/30
+!
+interface Ethernet3
+   ip address 10.0.0.9/30
+!
+interface Ethernet5
+   ip address 10.0.0.13/30
+!
+interface Ethernet7
+   ip address 10.0.2.9/30
+!
+interface Ethernet8
+   ip address 10.0.2.13/30
+!
+interface Management0
+   ip address 172.20.20.6/24
+   ipv6 address 3fff:172:20:20::6/64
+!
+no ip routing
+!
+ip route 0.0.0.0/0 172.20.20.1
+!
+ipv6 route ::/0 3fff:172:20:20::1
+!
+router ospf 1
+   network 10.0.0.0/30 area 0.0.0.0
+   network 10.0.1.0/30 area 0.0.0.0
+   network 10.0.2.0/30 area 0.0.0.0
+   max-lsa 12000
+!
+end

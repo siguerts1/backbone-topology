@@ -1,0 +1,25 @@
+all:
+  vars:
+    # The generated inventory is assumed to be used from the clab host.
+    # Hence no http proxy should be used. Therefore we make sure the http
+    # module does not attempt using any global http proxy.
+    ansible_httpapi_use_proxy: false
+  children:
+    ceos:
+      vars:
+        # ansible_connection: set ansible_connection variable if required
+        ansible_user: admin
+        ansible_password: admin
+      hosts:
+        clab-backbone-topology-LDN-CORE-01:
+          ansible_host: 172.20.20.3
+        clab-backbone-topology-LDN-CORE-02:
+          ansible_host: 172.20.20.5
+        clab-backbone-topology-MTL-CORE-01:
+          ansible_host: 172.20.20.2
+        clab-backbone-topology-MTL-CORE-02:
+          ansible_host: 172.20.20.4
+        clab-backbone-topology-SF-CORE-01:
+          ansible_host: 172.20.20.6
+        clab-backbone-topology-SF-CORE-02:
+          ansible_host: 172.20.20.7

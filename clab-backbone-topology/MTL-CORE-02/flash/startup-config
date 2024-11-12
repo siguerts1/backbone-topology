@@ -1,0 +1,63 @@
+! Startup-config last modified at Mon Nov 11 22:38:21 2024 by root
+! device: MTL-CORE-02 (cEOSLab, EOS-4.30.4M-34191138.4304M (engineering build))
+!
+no aaa root
+!
+username admin privilege 15 role network-admin secret sha512 $6$kQ9N5P6t457qHCba$3gT4qi3mWrK4wJwpa2RrdHZcgbrhDbIOmk3iE57u7YN68v2/Q.JKXq/Mme3IPXLs/1xMif0j2Umc/gzj4SMF./
+!
+transceiver qsfp default-mode 4x10G
+!
+service routing protocols model multi-agent
+!
+hostname MTL-CORE-02
+!
+spanning-tree mode mstp
+!
+system l1
+   unsupported speed action error
+   unsupported error-correction action error
+!
+management api http-commands
+   no shutdown
+!
+management api gnmi
+   transport grpc default
+!
+management api netconf
+   transport ssh default
+!
+interface Ethernet1
+   ip address 10.0.0.2/30
+!
+interface Ethernet2
+   ip address 10.0.0.6/30
+!
+interface Ethernet5
+   ip address 10.0.1.2/30
+!
+interface Ethernet6
+   ip address 10.0.1.6/30
+!
+interface Ethernet9
+   ip address 10.0.2.2/30
+!
+interface Ethernet10
+   ip address 10.0.2.6/30
+!
+interface Management0
+   ip address 172.20.20.4/24
+   ipv6 address 3fff:172:20:20::4/64
+!
+no ip routing
+!
+ip route 0.0.0.0/0 172.20.20.1
+!
+ipv6 route ::/0 3fff:172:20:20::1
+!
+router ospf 1
+   network 10.0.0.0/30 area 0.0.0.0
+   network 10.0.1.0/30 area 0.0.0.0
+   network 10.0.2.0/30 area 0.0.0.0
+   max-lsa 12000
+!
+end
