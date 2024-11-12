@@ -1,9 +1,9 @@
-! Startup-config last modified at Mon Nov 11 22:38:18 2024 by root
+! Startup-config last modified at Tue Nov 12 04:07:30 2024 by root
 ! device: SF-CORE-02 (cEOSLab, EOS-4.30.4M-34191138.4304M (engineering build))
 !
 no aaa root
 !
-username admin privilege 15 role network-admin secret sha512 $6$ztunX6dgU6ekINZB$GGTzrT9uHvdk9dbF/ZHy8tbPC.vgVCxUTGXkPh7v/2stItuTIhNrE.8Emy7oJKQr18h3Dga3PfldqOPRn/IN9/
+username admin privilege 15 role network-admin secret sha512 $6$.TELkgWqZ264pgCg$PMicwiE2Ay/1pcvTlCpF7RZm69StQDi23hkdbEg3f2EzqFlNj744MY6s4hvl70lhJ8VcPtSgrZWgm15oR3Psz.
 !
 transceiver qsfp default-mode 4x10G
 !
@@ -45,19 +45,11 @@ interface Ethernet10
    ip address 10.0.2.14/30
 !
 interface Management0
-   ip address 172.20.20.7/24
-   ipv6 address 3fff:172:20:20::7/64
+   ip address 172.20.20.6/24
+   ipv6 address 3fff:172:20:20::6/64
 !
 no ip routing
 !
-ip route 0.0.0.0/0 172.20.20.1
-!
 ipv6 route ::/0 3fff:172:20:20::1
-!
-router ospf 1
-   network 10.0.0.0/30 area 0.0.0.0
-   network 10.0.1.0/30 area 0.0.0.0
-   network 10.0.2.0/30 area 0.0.0.0
-   max-lsa 12000
 !
 end

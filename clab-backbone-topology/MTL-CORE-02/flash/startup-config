@@ -1,9 +1,9 @@
-! Startup-config last modified at Mon Nov 11 22:38:21 2024 by root
+! Startup-config last modified at Tue Nov 12 04:07:29 2024 by root
 ! device: MTL-CORE-02 (cEOSLab, EOS-4.30.4M-34191138.4304M (engineering build))
 !
 no aaa root
 !
-username admin privilege 15 role network-admin secret sha512 $6$kQ9N5P6t457qHCba$3gT4qi3mWrK4wJwpa2RrdHZcgbrhDbIOmk3iE57u7YN68v2/Q.JKXq/Mme3IPXLs/1xMif0j2Umc/gzj4SMF./
+username admin privilege 15 role network-admin secret sha512 $6$ajEB4kSVwPsv6TJU$cJkY2m0H9y7kfrO/hwqyy5P1ddVs2F88mPIFRXnjoBwe7kPbj8C0dURCZhB5U/xFZMVME5Rc0MNI8nFF5Ra4l.
 !
 transceiver qsfp default-mode 4x10G
 !
@@ -45,19 +45,11 @@ interface Ethernet10
    ip address 10.0.2.6/30
 !
 interface Management0
-   ip address 172.20.20.4/24
-   ipv6 address 3fff:172:20:20::4/64
+   ip address 172.20.20.3/24
+   ipv6 address 3fff:172:20:20::2/64
 !
 no ip routing
 !
-ip route 0.0.0.0/0 172.20.20.1
-!
 ipv6 route ::/0 3fff:172:20:20::1
-!
-router ospf 1
-   network 10.0.0.0/30 area 0.0.0.0
-   network 10.0.1.0/30 area 0.0.0.0
-   network 10.0.2.0/30 area 0.0.0.0
-   max-lsa 12000
 !
 end

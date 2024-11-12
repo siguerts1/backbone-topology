@@ -1,9 +1,9 @@
-! Startup-config last modified at Mon Nov 11 22:38:19 2024 by root
+! Startup-config last modified at Tue Nov 12 04:07:34 2024 by root
 ! device: LDN-CORE-02 (cEOSLab, EOS-4.30.4M-34191138.4304M (engineering build))
 !
 no aaa root
 !
-username admin privilege 15 role network-admin secret sha512 $6$enJ/al9SC1rRwJnq$558wlmSATsrM57MWg0iapiD7R97qQAIe/Mn6axHKmqJ6ySltb8G0qdtjmPfC4Los0kMFn6gA6DGOQOhtPPntk1
+username admin privilege 15 role network-admin secret sha512 $6$BrRPmAV37K5wtJwt$aHFQdO2gqiuA83nUB4T5Ux3PxuRRNrmaESVVK7OWN5pcZrsSLxkG1xAP0lhe5H5BEjKrkxI/DfsUXX9a72X6C1
 !
 transceiver qsfp default-mode 4x10G
 !
@@ -46,14 +46,10 @@ interface Ethernet10
 !
 interface Management0
    ip address 172.20.20.5/24
-   ipv6 address 3fff:172:20:20::5/64
+   ipv6 address 3fff:172:20:20::4/64
 !
 no ip routing
 !
-router ospf 1
-   network 10.0.0.0/30 area 0.0.0.0
-   network 10.0.1.0/30 area 0.0.0.0
-   network 10.0.2.0/30 area 0.0.0.0
-   max-lsa 12000
+ipv6 route ::/0 3fff:172:20:20::1
 !
 end

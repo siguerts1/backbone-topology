@@ -18,7 +18,7 @@ xt_mark 16384 0 - Live 0xffffffffc18f4000
 8021q 36864 0 - Live 0xffffffffc18ea000
 garp 16384 1 8021q, Live 0xffffffffc18e2000
 mrp 20480 1 8021q, Live 0xffffffffc18d9000
-xt_nat 16384 24 - Live 0xffffffffc126f000
+xt_nat 16384 36 - Live 0xffffffffc126f000
 veth 32768 0 - Live 0xffffffffc125d000
 ufs 106496 0 - Live 0xffffffffc1874000
 qnx4 16384 0 - Live 0xffffffffc15be000
@@ -44,12 +44,12 @@ nft_counter 16384 0 - Live 0xffffffffc1370000
 vboxnetadp 28672 0 - Live 0xffffffffc1409000 (OE)
 vboxnetflt 28672 0 - Live 0xffffffffc13fc000 (OE)
 xt_comment 16384 18 - Live 0xffffffffc13cf000
-xt_tcpudp 20480 31 - Live 0xffffffffc13b9000
+xt_tcpudp 20480 43 - Live 0xffffffffc13b9000
 nft_compat 20480 0 - Live 0xffffffffc13b3000
 vboxdrv 573440 2 vboxnetadp,vboxnetflt, Live 0xffffffffc1603000 (OE)
 iptable_raw 16384 0 - Live 0xffffffffc1364000
 iptable_mangle 16384 1 - Live 0xffffffffc135c000
-iptable_nat 16384 7 - Live 0xffffffffc13d5000
+iptable_nat 16384 10 - Live 0xffffffffc13d5000
 nf_nat 49152 5 ip6table_nat,xt_nat,xt_MASQUERADE,nft_chain_nat,iptable_nat, Live 0xffffffffc13c2000
 nf_conntrack 172032 6 xt_CT,xt_nat,nf_conntrack_netlink,xt_conntrack,xt_MASQUERADE,nf_nat, Live 0xffffffffc1388000
 nf_defrag_ipv6 24576 1 nf_conntrack, Live 0xffffffffc137d000
@@ -59,7 +59,7 @@ nf_tables 262144 3 nft_chain_nat,nft_counter,nft_compat, Live 0xffffffffc131b000
 nfnetlink 20480 5 nfnetlink_log,nf_conntrack_netlink,nft_compat,nf_tables, Live 0xffffffffc1311000
 ccm 20480 6 - Live 0xffffffffc12c4000
 aufs 270336 0 - Live 0xffffffffc1281000
-overlay 151552 6 - Live 0xffffffffc1212000
+overlay 151552 9 - Live 0xffffffffc1212000
 nls_iso8859_1 16384 1 - Live 0xffffffffc0c14000
 intel_rapl_msr 20480 0 - Live 0xffffffffc0d7e000
 mei_hdcp 24576 0 - Live 0xffffffffc0b75000
@@ -172,7 +172,7 @@ raid0 24576 0 - Live 0xffffffffc02e7000
 multipath 20480 0 - Live 0xffffffffc02dd000
 linear 20480 0 - Live 0xffffffffc02d4000
 r8169 86016 0 - Live 0xffffffffc02f5000
-ahci 49152 3 - Live 0xffffffffc0479000
+ahci 49152 4 - Live 0xffffffffc0479000
 i2c_i801 36864 0 - Live 0xffffffffc046a000
 xhci_pci 24576 0 - Live 0xffffffffc045e000
 wmi 32768 5 dell_wmi,dell_smbios,dell_wmi_descriptor,nouveau,mxm_wmi, Live 0xffffffffc040f000

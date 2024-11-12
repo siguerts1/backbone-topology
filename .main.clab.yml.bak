@@ -6,26 +6,41 @@ topology:
       kind: ceos
       image: ceos:4.30.4M
       startup-config: startup-configs/MTL-CORE-01.cfg
+      mgmt-ipv4: 172.20.20.2
     MTL-CORE-02:
       kind: ceos
       image: ceos:4.30.4M
       startup-config: startup-configs/MTL-CORE-02.cfg
+      mgmt-ipv4: 172.20.20.3
     SF-CORE-01:
       kind: ceos
       image: ceos:4.30.4M
       startup-config: startup-configs/SF-CORE-01.cfg
+      mgmt-ipv4: 172.20.20.7
     SF-CORE-02:
       kind: ceos
       image: ceos:4.30.4M
       startup-config: startup-configs/SF-CORE-02.cfg
+      mgmt-ipv4: 172.20.20.6
     LDN-CORE-01:
       kind: ceos
       image: ceos:4.30.4M
       startup-config: startup-configs/LDN-CORE-01.cfg
+      mgmt-ipv4: 172.20.20.4
     LDN-CORE-02:
       kind: ceos
       image: ceos:4.30.4M
       startup-config: startup-configs/LDN-CORE-02.cfg
+      mgmt-ipv4: 172.20.20.5
+    MTL-LINUX:
+      kind: linux
+      image: alpine:latest
+    SF-LINUX:
+      kind: linux
+      image: alpine:latest
+    LDN-LINUX:
+      kind: linux
+      image: alpine:latest
 
   links:
     # Montreal Core Routers (LAG links between them)
@@ -58,3 +73,8 @@ topology:
     - endpoints: ["SF-CORE-01:eth8", "LDN-CORE-02:eth8"]
     - endpoints: ["SF-CORE-02:eth9", "LDN-CORE-01:eth9"]
     - endpoints: ["SF-CORE-02:eth10", "LDN-CORE-02:eth10"]
+
+    # Test Linux Machines Connections
+    - endpoints: ["MTL-CORE-01:eth11", "MTL-LINUX:eth1"]
+    - endpoints: ["SF-CORE-01:eth11", "SF-LINUX:eth1"]
+    - endpoints: ["LDN-CORE-01:eth11", "LDN-LINUX:eth1"]

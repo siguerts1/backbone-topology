@@ -6,7 +6,7 @@
       "prefix": "clab",
       "mgmt": {
         "network": "clab",
-        "bridge": "br-b26714ba21bb",
+        "bridge": "br-29788c231914",
         "ipv4-subnet": "172.20.20.0/24",
         "ipv4-gw": "172.20.20.1",
         "ipv6-subnet": "3fff:172:20:20::/64",
@@ -28,13 +28,13 @@
       "image": "ceos:4.30.4M",
       "mgmt-net": "",
       "mgmt-intf": "Management0",
-      "mgmt-ipv4-address": "172.20.20.3",
+      "mgmt-ipv4-address": "172.20.20.4",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "3fff:172:20:20::3",
+      "mgmt-ipv6-address": "3fff:172:20:20::5",
       "mgmt-ipv6-prefix-length": 64,
-      "mac-address": "00:1c:73:b9:50:e7",
+      "mac-address": "00:1c:73:d3:a2:03",
       "labels": {
-        "clab-mgmt-net-bridge": "br-b26714ba21bb",
+        "clab-mgmt-net-bridge": "br-29788c231914",
         "clab-node-group": "",
         "clab-node-kind": "ceos",
         "clab-node-lab-dir": "/opt/container-lab/backbone-topology/clab-backbone-topology/LDN-CORE-01",
@@ -60,11 +60,11 @@
       "mgmt-intf": "Management0",
       "mgmt-ipv4-address": "172.20.20.5",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "3fff:172:20:20::5",
+      "mgmt-ipv6-address": "3fff:172:20:20::4",
       "mgmt-ipv6-prefix-length": 64,
-      "mac-address": "00:1c:73:2b:16:e9",
+      "mac-address": "00:1c:73:e0:75:04",
       "labels": {
-        "clab-mgmt-net-bridge": "br-b26714ba21bb",
+        "clab-mgmt-net-bridge": "br-29788c231914",
         "clab-node-group": "",
         "clab-node-kind": "ceos",
         "clab-node-lab-dir": "/opt/container-lab/backbone-topology/clab-backbone-topology/LDN-CORE-02",
@@ -77,8 +77,38 @@
       "port-bindings": [
       ]
     },
-    "MTL-CORE-01": {
+    "LDN-LINUX": {
       "index": "2",
+      "shortname": "LDN-LINUX",
+      "longname": "clab-backbone-topology-LDN-LINUX",
+      "fqdn": "LDN-LINUX.backbone-topology.io",
+      "group": "",
+      "labdir": "/opt/container-lab/backbone-topology/clab-backbone-topology/LDN-LINUX",
+      "kind": "linux",
+      "image": "alpine:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.9",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::9",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-29788c231914",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/opt/container-lab/backbone-topology/clab-backbone-topology/LDN-LINUX",
+        "clab-node-name": "LDN-LINUX",
+        "clab-node-type": "",
+        "clab-owner": "root",
+        "clab-topo-file": "/opt/container-lab/backbone-topology/main.clab.yml",
+        "containerlab": "backbone-topology"
+      },
+      "port-bindings": [
+      ]
+    },
+    "MTL-CORE-01": {
+      "index": "3",
       "shortname": "MTL-CORE-01",
       "longname": "clab-backbone-topology-MTL-CORE-01",
       "fqdn": "MTL-CORE-01.backbone-topology.io",
@@ -90,11 +120,11 @@
       "mgmt-intf": "Management0",
       "mgmt-ipv4-address": "172.20.20.2",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "3fff:172:20:20::2",
+      "mgmt-ipv6-address": "3fff:172:20:20::7",
       "mgmt-ipv6-prefix-length": 64,
-      "mac-address": "00:1c:73:3b:b3:e7",
+      "mac-address": "00:1c:73:25:b7:e8",
       "labels": {
-        "clab-mgmt-net-bridge": "br-b26714ba21bb",
+        "clab-mgmt-net-bridge": "br-29788c231914",
         "clab-node-group": "",
         "clab-node-kind": "ceos",
         "clab-node-lab-dir": "/opt/container-lab/backbone-topology/clab-backbone-topology/MTL-CORE-01",
@@ -108,7 +138,7 @@
       ]
     },
     "MTL-CORE-02": {
-      "index": "3",
+      "index": "4",
       "shortname": "MTL-CORE-02",
       "longname": "clab-backbone-topology-MTL-CORE-02",
       "fqdn": "MTL-CORE-02.backbone-topology.io",
@@ -118,13 +148,13 @@
       "image": "ceos:4.30.4M",
       "mgmt-net": "",
       "mgmt-intf": "Management0",
-      "mgmt-ipv4-address": "172.20.20.4",
+      "mgmt-ipv4-address": "172.20.20.3",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "3fff:172:20:20::4",
+      "mgmt-ipv6-address": "3fff:172:20:20::2",
       "mgmt-ipv6-prefix-length": 64,
-      "mac-address": "00:1c:73:67:ae:59",
+      "mac-address": "00:1c:73:89:f7:d3",
       "labels": {
-        "clab-mgmt-net-bridge": "br-b26714ba21bb",
+        "clab-mgmt-net-bridge": "br-29788c231914",
         "clab-node-group": "",
         "clab-node-kind": "ceos",
         "clab-node-lab-dir": "/opt/container-lab/backbone-topology/clab-backbone-topology/MTL-CORE-02",
@@ -137,8 +167,38 @@
       "port-bindings": [
       ]
     },
+    "MTL-LINUX": {
+      "index": "5",
+      "shortname": "MTL-LINUX",
+      "longname": "clab-backbone-topology-MTL-LINUX",
+      "fqdn": "MTL-LINUX.backbone-topology.io",
+      "group": "",
+      "labdir": "/opt/container-lab/backbone-topology/clab-backbone-topology/MTL-LINUX",
+      "kind": "linux",
+      "image": "alpine:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.8",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::8",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-29788c231914",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/opt/container-lab/backbone-topology/clab-backbone-topology/MTL-LINUX",
+        "clab-node-name": "MTL-LINUX",
+        "clab-node-type": "",
+        "clab-owner": "root",
+        "clab-topo-file": "/opt/container-lab/backbone-topology/main.clab.yml",
+        "containerlab": "backbone-topology"
+      },
+      "port-bindings": [
+      ]
+    },
     "SF-CORE-01": {
-      "index": "4",
+      "index": "6",
       "shortname": "SF-CORE-01",
       "longname": "clab-backbone-topology-SF-CORE-01",
       "fqdn": "SF-CORE-01.backbone-topology.io",
@@ -148,13 +208,13 @@
       "image": "ceos:4.30.4M",
       "mgmt-net": "",
       "mgmt-intf": "Management0",
-      "mgmt-ipv4-address": "172.20.20.6",
+      "mgmt-ipv4-address": "172.20.20.7",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "3fff:172:20:20::6",
+      "mgmt-ipv6-address": "3fff:172:20:20::3",
       "mgmt-ipv6-prefix-length": 64,
-      "mac-address": "00:1c:73:dc:e1:4f",
+      "mac-address": "00:1c:73:f7:3c:89",
       "labels": {
-        "clab-mgmt-net-bridge": "br-b26714ba21bb",
+        "clab-mgmt-net-bridge": "br-29788c231914",
         "clab-node-group": "",
         "clab-node-kind": "ceos",
         "clab-node-lab-dir": "/opt/container-lab/backbone-topology/clab-backbone-topology/SF-CORE-01",
@@ -168,7 +228,7 @@
       ]
     },
     "SF-CORE-02": {
-      "index": "5",
+      "index": "7",
       "shortname": "SF-CORE-02",
       "longname": "clab-backbone-topology-SF-CORE-02",
       "fqdn": "SF-CORE-02.backbone-topology.io",
@@ -178,17 +238,47 @@
       "image": "ceos:4.30.4M",
       "mgmt-net": "",
       "mgmt-intf": "Management0",
-      "mgmt-ipv4-address": "172.20.20.7",
+      "mgmt-ipv4-address": "172.20.20.6",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "3fff:172:20:20::7",
+      "mgmt-ipv6-address": "3fff:172:20:20::6",
       "mgmt-ipv6-prefix-length": 64,
-      "mac-address": "00:1c:73:2b:ec:75",
+      "mac-address": "00:1c:73:50:92:9f",
       "labels": {
-        "clab-mgmt-net-bridge": "br-b26714ba21bb",
+        "clab-mgmt-net-bridge": "br-29788c231914",
         "clab-node-group": "",
         "clab-node-kind": "ceos",
         "clab-node-lab-dir": "/opt/container-lab/backbone-topology/clab-backbone-topology/SF-CORE-02",
         "clab-node-name": "SF-CORE-02",
+        "clab-node-type": "",
+        "clab-owner": "root",
+        "clab-topo-file": "/opt/container-lab/backbone-topology/main.clab.yml",
+        "containerlab": "backbone-topology"
+      },
+      "port-bindings": [
+      ]
+    },
+    "SF-LINUX": {
+      "index": "8",
+      "shortname": "SF-LINUX",
+      "longname": "clab-backbone-topology-SF-LINUX",
+      "fqdn": "SF-LINUX.backbone-topology.io",
+      "group": "",
+      "labdir": "/opt/container-lab/backbone-topology/clab-backbone-topology/SF-LINUX",
+      "kind": "linux",
+      "image": "alpine:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.10",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::a",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-29788c231914",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/opt/container-lab/backbone-topology/clab-backbone-topology/SF-LINUX",
+        "clab-node-name": "SF-LINUX",
         "clab-node-type": "",
         "clab-owner": "root",
         "clab-topo-file": "/opt/container-lab/backbone-topology/main.clab.yml",
@@ -203,13 +293,13 @@
       "a": {
         "node": "MTL-CORE-01",
         "interface": "eth1",
-        "mac": "aa:c1:ab:61:3d:f2",
+        "mac": "aa:c1:ab:c9:38:f7",
         "peer": "z"
       },
       "z": {
         "node": "MTL-CORE-02",
         "interface": "eth1",
-        "mac": "aa:c1:ab:e4:b1:0d",
+        "mac": "aa:c1:ab:3d:6b:e5",
         "peer": "a"
       }
     },
@@ -217,13 +307,13 @@
       "a": {
         "node": "MTL-CORE-01",
         "interface": "eth2",
-        "mac": "aa:c1:ab:fa:fc:a5",
+        "mac": "aa:c1:ab:0a:10:06",
         "peer": "z"
       },
       "z": {
         "node": "MTL-CORE-02",
         "interface": "eth2",
-        "mac": "aa:c1:ab:be:e1:4c",
+        "mac": "aa:c1:ab:e0:aa:88",
         "peer": "a"
       }
     },
@@ -231,13 +321,13 @@
       "a": {
         "node": "SF-CORE-01",
         "interface": "eth1",
-        "mac": "aa:c1:ab:57:5d:a7",
+        "mac": "aa:c1:ab:f1:1b:a9",
         "peer": "z"
       },
       "z": {
         "node": "SF-CORE-02",
         "interface": "eth1",
-        "mac": "aa:c1:ab:aa:85:2d",
+        "mac": "aa:c1:ab:be:9a:77",
         "peer": "a"
       }
     },
@@ -245,13 +335,13 @@
       "a": {
         "node": "SF-CORE-01",
         "interface": "eth2",
-        "mac": "aa:c1:ab:7d:37:a5",
+        "mac": "aa:c1:ab:b7:3f:0d",
         "peer": "z"
       },
       "z": {
         "node": "SF-CORE-02",
         "interface": "eth2",
-        "mac": "aa:c1:ab:dc:22:4b",
+        "mac": "aa:c1:ab:8d:04:c3",
         "peer": "a"
       }
     },
@@ -259,13 +349,13 @@
       "a": {
         "node": "LDN-CORE-01",
         "interface": "eth1",
-        "mac": "aa:c1:ab:18:fb:65",
+        "mac": "aa:c1:ab:c9:92:15",
         "peer": "z"
       },
       "z": {
         "node": "LDN-CORE-02",
         "interface": "eth1",
-        "mac": "aa:c1:ab:17:b6:ad",
+        "mac": "aa:c1:ab:85:f9:0c",
         "peer": "a"
       }
     },
@@ -273,13 +363,13 @@
       "a": {
         "node": "LDN-CORE-01",
         "interface": "eth2",
-        "mac": "aa:c1:ab:8b:21:2b",
+        "mac": "aa:c1:ab:05:cc:e8",
         "peer": "z"
       },
       "z": {
         "node": "LDN-CORE-02",
         "interface": "eth2",
-        "mac": "aa:c1:ab:f9:63:d6",
+        "mac": "aa:c1:ab:33:53:17",
         "peer": "a"
       }
     },
@@ -287,13 +377,13 @@
       "a": {
         "node": "MTL-CORE-01",
         "interface": "eth3",
-        "mac": "aa:c1:ab:d0:08:94",
+        "mac": "aa:c1:ab:f1:c7:02",
         "peer": "z"
       },
       "z": {
         "node": "SF-CORE-01",
         "interface": "eth3",
-        "mac": "aa:c1:ab:de:6c:f8",
+        "mac": "aa:c1:ab:be:ef:ff",
         "peer": "a"
       }
     },
@@ -301,13 +391,13 @@
       "a": {
         "node": "MTL-CORE-01",
         "interface": "eth4",
-        "mac": "aa:c1:ab:21:1e:e6",
+        "mac": "aa:c1:ab:28:37:d3",
         "peer": "z"
       },
       "z": {
         "node": "SF-CORE-02",
         "interface": "eth4",
-        "mac": "aa:c1:ab:eb:0e:73",
+        "mac": "aa:c1:ab:2f:fe:e5",
         "peer": "a"
       }
     },
@@ -315,13 +405,13 @@
       "a": {
         "node": "MTL-CORE-02",
         "interface": "eth5",
-        "mac": "aa:c1:ab:d9:4f:5d",
+        "mac": "aa:c1:ab:c3:ea:59",
         "peer": "z"
       },
       "z": {
         "node": "SF-CORE-01",
         "interface": "eth5",
-        "mac": "aa:c1:ab:69:b6:06",
+        "mac": "aa:c1:ab:00:d3:29",
         "peer": "a"
       }
     },
@@ -329,13 +419,13 @@
       "a": {
         "node": "MTL-CORE-02",
         "interface": "eth6",
-        "mac": "aa:c1:ab:6f:a8:c6",
+        "mac": "aa:c1:ab:e5:4c:aa",
         "peer": "z"
       },
       "z": {
         "node": "SF-CORE-02",
         "interface": "eth6",
-        "mac": "aa:c1:ab:72:7a:78",
+        "mac": "aa:c1:ab:86:f8:37",
         "peer": "a"
       }
     },
@@ -343,13 +433,13 @@
       "a": {
         "node": "MTL-CORE-01",
         "interface": "eth7",
-        "mac": "aa:c1:ab:5d:a1:aa",
+        "mac": "aa:c1:ab:25:cd:de",
         "peer": "z"
       },
       "z": {
         "node": "LDN-CORE-01",
         "interface": "eth3",
-        "mac": "aa:c1:ab:e8:4f:ec",
+        "mac": "aa:c1:ab:e6:fe:c9",
         "peer": "a"
       }
     },
@@ -357,13 +447,13 @@
       "a": {
         "node": "MTL-CORE-01",
         "interface": "eth8",
-        "mac": "aa:c1:ab:a0:a0:64",
+        "mac": "aa:c1:ab:48:60:f1",
         "peer": "z"
       },
       "z": {
         "node": "LDN-CORE-02",
         "interface": "eth4",
-        "mac": "aa:c1:ab:db:87:56",
+        "mac": "aa:c1:ab:e3:66:71",
         "peer": "a"
       }
     },
@@ -371,13 +461,13 @@
       "a": {
         "node": "MTL-CORE-02",
         "interface": "eth9",
-        "mac": "aa:c1:ab:95:04:01",
+        "mac": "aa:c1:ab:aa:4d:ec",
         "peer": "z"
       },
       "z": {
         "node": "LDN-CORE-01",
         "interface": "eth5",
-        "mac": "aa:c1:ab:61:46:0c",
+        "mac": "aa:c1:ab:af:e3:c4",
         "peer": "a"
       }
     },
@@ -385,13 +475,13 @@
       "a": {
         "node": "MTL-CORE-02",
         "interface": "eth10",
-        "mac": "aa:c1:ab:1d:00:98",
+        "mac": "aa:c1:ab:fd:ad:5a",
         "peer": "z"
       },
       "z": {
         "node": "LDN-CORE-02",
         "interface": "eth6",
-        "mac": "aa:c1:ab:38:9f:8a",
+        "mac": "aa:c1:ab:77:bc:72",
         "peer": "a"
       }
     },
@@ -399,13 +489,13 @@
       "a": {
         "node": "SF-CORE-01",
         "interface": "eth7",
-        "mac": "aa:c1:ab:65:e4:7b",
+        "mac": "aa:c1:ab:ce:1e:08",
         "peer": "z"
       },
       "z": {
         "node": "LDN-CORE-01",
         "interface": "eth7",
-        "mac": "aa:c1:ab:1a:2e:59",
+        "mac": "aa:c1:ab:45:cb:4a",
         "peer": "a"
       }
     },
@@ -413,13 +503,13 @@
       "a": {
         "node": "SF-CORE-01",
         "interface": "eth8",
-        "mac": "aa:c1:ab:e2:81:9a",
+        "mac": "aa:c1:ab:0d:31:f3",
         "peer": "z"
       },
       "z": {
         "node": "LDN-CORE-02",
         "interface": "eth8",
-        "mac": "aa:c1:ab:5a:c6:cc",
+        "mac": "aa:c1:ab:93:ad:db",
         "peer": "a"
       }
     },
@@ -427,13 +517,13 @@
       "a": {
         "node": "SF-CORE-02",
         "interface": "eth9",
-        "mac": "aa:c1:ab:d8:94:85",
+        "mac": "aa:c1:ab:39:a6:55",
         "peer": "z"
       },
       "z": {
         "node": "LDN-CORE-01",
         "interface": "eth9",
-        "mac": "aa:c1:ab:bd:05:c5",
+        "mac": "aa:c1:ab:04:d5:c2",
         "peer": "a"
       }
     },
@@ -441,13 +531,55 @@
       "a": {
         "node": "SF-CORE-02",
         "interface": "eth10",
-        "mac": "aa:c1:ab:d1:b0:dd",
+        "mac": "aa:c1:ab:f8:1c:bd",
         "peer": "z"
       },
       "z": {
         "node": "LDN-CORE-02",
         "interface": "eth10",
-        "mac": "aa:c1:ab:8c:d4:96",
+        "mac": "aa:c1:ab:dc:49:0d",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "MTL-CORE-01",
+        "interface": "eth11",
+        "mac": "aa:c1:ab:11:4b:be",
+        "peer": "z"
+      },
+      "z": {
+        "node": "MTL-LINUX",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:84:18:7f",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "SF-CORE-01",
+        "interface": "eth11",
+        "mac": "aa:c1:ab:33:a7:13",
+        "peer": "z"
+      },
+      "z": {
+        "node": "SF-LINUX",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:32:7e:6d",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "LDN-CORE-01",
+        "interface": "eth11",
+        "mac": "aa:c1:ab:fc:3b:9f",
+        "peer": "z"
+      },
+      "z": {
+        "node": "LDN-LINUX",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:18:6b:12",
         "peer": "a"
       }
     }

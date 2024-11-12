@@ -12,14 +12,22 @@ all:
         ansible_password: admin
       hosts:
         clab-backbone-topology-LDN-CORE-01:
-          ansible_host: 172.20.20.3
+          ansible_host: 172.20.20.4
         clab-backbone-topology-LDN-CORE-02:
           ansible_host: 172.20.20.5
         clab-backbone-topology-MTL-CORE-01:
           ansible_host: 172.20.20.2
         clab-backbone-topology-MTL-CORE-02:
-          ansible_host: 172.20.20.4
+          ansible_host: 172.20.20.3
         clab-backbone-topology-SF-CORE-01:
-          ansible_host: 172.20.20.6
-        clab-backbone-topology-SF-CORE-02:
           ansible_host: 172.20.20.7
+        clab-backbone-topology-SF-CORE-02:
+          ansible_host: 172.20.20.6
+    linux:
+      hosts:
+        clab-backbone-topology-LDN-LINUX:
+          ansible_host: 172.20.20.9
+        clab-backbone-topology-MTL-LINUX:
+          ansible_host: 172.20.20.8
+        clab-backbone-topology-SF-LINUX:
+          ansible_host: 172.20.20.10
